@@ -24,16 +24,7 @@
 
         <script type="text/javascript" src="http://stratus.sc/stratus.js"></script>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $.stratus({
-                    auto_play: true,
-                    download: false,
-                    links: 'http://soundcloud.com/qotsa',
-                    random: true
-                });
-            });
-        </script>
+     
 
 
     </head>
@@ -47,7 +38,21 @@
 
         </div>
       
+        <script>
+            (function() {
+                var script = document.createElement("script");
 
+                script.type = "text/javascript";
+                script.async = true;
+                script.src = "//sd.toneden.io/production/toneden.loader.js"
+
+                var entry = document.getElementsByTagName("script")[0];
+                entry.parentNode.insertBefore(script, entry);
+            }());
+
+           
+        </script>
+        <div id="player"></div>
     </body>
-
+    
 </html>
