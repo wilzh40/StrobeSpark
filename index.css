@@ -1,0 +1,35 @@
+index.css
+body {
+    background-color: #494949;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+
+}
+h1,
+h2,
+h3 {
+    font-family: 'Poiret One', cursive;
+}
+h4,
+h5,
+h6 {
+    font-family: 'Nixie One', cursive;
+}
+* {
+    box-sizing: border-box;
+}
+
+span {
+
+
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+
+}
+span:hover {
+    color: #BC2328;
+    opacity: 0.75;
+
+}

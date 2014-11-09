@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Beatmap</title>
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://startbootstrap.com/templates/clean-blog/css/clean-blog.min.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Nixie+One|Poiret+One' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+        <script type="text/javascript" src="jquery.js"></script>
+
+        <!script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"><!/script>
+
+
+        <script src="//connect.soundcloud.com/sdk.js"></script>
+        <script>
+            SC.initialize({
+                client_id: "b73d499fb4ccbfe80717e923fd6a81c3"
+
+            });
+        </script>
+
+        <script src="app.js"></script>
+
+        <script type="text/javascript" src="http://stratus.sc/stratus.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.stratus({
+                    auto_play: true,
+                    download: false,
+                    links: 'http://soundcloud.com/qotsa',
+                    random: true
+                });
+            });
+        </script>
+
+
+    </head>
+
+
+    <body ng-app="mashup" ng-controller="MainCtrl">
+
+        <div class="jumbotron black">
+            <h1>[Beatmap]</h1>
+
+
+        </div>
+      
+
+    </body>
+
+</html>
