@@ -5,7 +5,7 @@
 var spotifyApi = new SpotifyWebApi();
 var echonestApi = new EchonestApi();
 
-
+var finalTempo;
 
 
 
@@ -25,6 +25,26 @@ audioTag.addEventListener('timeupdate', function() {
 
 playButton.addEventListener('click', function() {
   audioTag.play();
+    
+
+
+    $.ajax({
+        type: 'POST',
+        url: 'https://api.spark.io/v1/devices/54ff72066667515141081567/play?access_token=71177b5e2ea528b6f84f2729f0017aba9071b5e0',
+        crossDomain: true,
+        data: {"arg":finalTempo},
+        dataType: 'json',
+        success: function(responseData, textStatus, jqXHR) {
+            var value = responseData.someKey;
+            console.log(value);
+        },
+        error: function (responseData, textStatus, errorThrown) {
+            alert('POST failed.');
+        }
+    });
+
+
+
 });
 
 result.style.display = 'none';
@@ -100,6 +120,23 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
             text.innerHTML = '<div id="guess">Guess for track <strong>' + track.name + '</strong> by ' +
               '<strong>' + track.artists[0].name + '</strong> is <strong>' + Math.round(top[0].tempo) + ' BPM</strong>';
+              
+              finalTempo = Math.round(top[0].tempo);
+              
+              $.ajax({
+                  type: 'POST',
+                  url: 'https://api.spark.io/v1/devices/54ff72066667515141081567/getBPM?access_token=71177b5e2ea528b6f84f2729f0017aba9071b5e0',
+                  crossDomain: true,
+                  data: {"arg":finalTempo},
+                  dataType: 'json',
+                  success: function(responseData, textStatus, jqXHR) {
+                      var value = responseData.someKey;
+                      console.log(value);
+                  },
+                  error: function (responseData, textStatus, errorThrown) {
+                      alert('POST failed.');
+                  }
+              });
               
               
               
