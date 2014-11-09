@@ -1,17 +1,27 @@
-
 int state = 0;
 int i = 1;
-int myArray[] = {9,3,2,4,3,2,7,8,9,11};
-void setup()
-{
-	pinMode(D7, OUTPUT);
+int myArray[] = {1,2,3,4,5,6}; 
+int BPM = 2;
+
+void setup() {
+    Spark.publish("getBPM", NULL, 600, PUBLIC);
+    Spark.function("getBPM", setBPM);
+
+    pinMode(D7, OUTPUT);
+
 }
 
-void loop()
+void loop() {
+    if (BPM>50) {
+        digitalWrite(D7, (state) ? HIGH : LOW);
+        state = !state;
+        i++;
+        int x = myArray[i];
+        //Converting BPM to beats
+        delay(60000/BPM);
+    }
+}
+int setBPM(String command)
 {
-	digitalWrite(D7, (state) ? HIGH : LOW);
-	state = !state;
-	i++;	
-	int x = myArray[i];
-	delay(x*500);
+    BPM = command.toInt();
 }
