@@ -1,4 +1,4 @@
 StrobeSpark
 ===========
-
-An strobelight that parses music through SparkCore, iOS, and a node.js backend.
+Made at CodeDay SV 2014. 
+A webapp that parses music through simple javascript and sends the BPM to a Sparkcore-powered strobelight.
