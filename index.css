@@ -1,0 +1,67 @@
+index.css
+body {
+    background-color: #494949;
+    padding-top: 5px;
+    padding-bottom: 75px;
+    text-align: center;
+
+}
+h1,
+h2,
+h3 {
+    font-size: 0.5em;
+    font-family: 'Poiret One', cursive;
+    margin : 0px auto;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 50px;
+}
+form,
+body {
+    font-family: 'Poiret One', cursive;
+}
+a,
+p,
+button,
+strong,
+weak,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+span {
+
+
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+
+}
+span:hover {
+    color: #BC2328;
+    opacity: 0.75;
+
+}
+
+button {
+    color:#c11414;
+    padding-top: 10px;
+    margin-top: 10px;
+    left:auto;
+    right:auto;
+    margin-left: 0 auto;
+    margin-right 0 auto;
+    top: 20px;
+    
+}
+
+input {
+    width:100%;
+}
